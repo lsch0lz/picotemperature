@@ -5,4 +5,4 @@ app = FastAPI()
 
 @app.put("/temperature")
 def get_temperature():
-    pass
+    return {"Message": "200 OK"}
