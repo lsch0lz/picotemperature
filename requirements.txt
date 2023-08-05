@@ -1,7 +1,10 @@
-# CORA
+# CORE
 pydantic==2.1.1
 uvicorn==0.23.2
 fastapi==0.100.1
+celery==4.4.2
+redis==4.6.0
+watchdog==3.0.0
 
 # GIT
 pre-commit==2.21.0
