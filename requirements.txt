@@ -3,6 +3,8 @@ pydantic<=1.10.4 # higher breaks prefect
 uvicorn==0.23.2
 fastapi==0.100.1
 
+streamlit==1.25.0
+
 prefect==2.11.3
 # GIT
 pre-commit==2.21.0
