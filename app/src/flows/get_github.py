@@ -23,7 +23,7 @@ def get_contributors(repo_info: str) -> str:
     return contributors
 
 
-@flow(name="GitHub Contributors", log_prints=True)
+@flow(name="GitHub")
 def repo_info(repo_owner: str = "PrefectHQ", repo_name: str = "prefect") -> tuple[Any | None, Any | None]:
     repo_info = get_repo(repo_owner, repo_name)
     print(f"Stars 🌠 : {repo_info['stargazers_count']}")
