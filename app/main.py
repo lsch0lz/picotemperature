@@ -16,5 +16,5 @@ def start_flow():
 
 @app.post("/send_temperature")
 async def send_temperature(date: datetime.date, temperature: float):
-    save_temperature(date, temperature)
+    await save_temperature(date, temperature)
     return {"message": "Temperature sent!"}
