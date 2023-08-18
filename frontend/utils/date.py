@@ -13,6 +13,5 @@ def get_dates(dataframe: DataFrame):
 
 
 def filter_dates(dataframe: DataFrame, date_from, date_to):
-    # date_from = datetime.strptime(date_from, DATE_TIME_STR)
-    # date_to = datetime.strptime(date_to, DATE_TIME_STR)
-    return dataframe[(dataframe["Date"] >= date_from.strftime(DATE_TIME_STR)) & (dataframe["Date"] <= date_to.strftime(DATE_TIME_STR))]
+    return dataframe[(dataframe["Date"] >= date_from.strftime(DATE_TIME_STR)) & (
+                dataframe["Date"] <= date_to.strftime(DATE_TIME_STR))]
