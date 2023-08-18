@@ -2,6 +2,8 @@ from datetime import datetime
 
 import streamlit as st
 import pandas as pd
+import pathlib
+import os
 
 from utils.date import get_dates, filter_dates, DATE_TIME_STR
 from flows.get_metrics import get_metrics
@@ -9,7 +11,8 @@ from flows.get_metrics import get_metrics
 
 st.title("Pico Temperature")
 
-df = pd.read_csv("/Users/lukasscholz/repositorys/picotemperature/app/data/temperature.csv",
+
+df = pd.read_csv(os.path.join(pathlib.Path(__file__).parents[1], "app/data/temperature.csv"),
                  names=["Date", "Temperature"], skiprows=[0])
 
 with st.sidebar:
