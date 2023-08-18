@@ -16,6 +16,7 @@ with st.sidebar:
     date_picker = st.date_input("Date", [datetime.strptime(get_dates(df)[1], DATE_TIME_STR).date(),
                                          datetime.strptime(get_dates(df)[0], DATE_TIME_STR).date()])
     show_metrics = st.checkbox("Show Metrics")
+
 try:
     st.line_chart(data=filter_dates(df, date_picker[0], date_picker[1]), x="Date", y="Temperature")
 

@@ -17,6 +17,6 @@ def calculate_lowest_temperature(dataframe: DataFrame) -> float:
     return dataframe.loc[:, "Temperature"].min()
 
 
-def get_metrics(dataframe: DataFrame):
+def get_metrics(dataframe: DataFrame) -> tuple[float, float, float, float]:
     return calculate_mean(dataframe), calculate_median(dataframe), calculate_highest_temperature(
         dataframe), calculate_lowest_temperature(dataframe)
